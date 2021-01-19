@@ -3,9 +3,11 @@
 
 CMakeFiles/Lab1.dir/Q1/question1.cpp.o
  /home/prix/Documents/6Semester/Compilers/Lab1/Q1/question1.cpp
+ /home/prix/Documents/6Semester/Compilers/Lab1/Q1/question1.h
 CMakeFiles/Lab1.dir/Utils/SymbolTable.cpp.o
  /home/prix/Documents/6Semester/Compilers/Lab1/Utils/SymbolTable.cpp
  /home/prix/Documents/6Semester/Compilers/Lab1/Utils/SymbolTable.h
 CMakeFiles/Lab1.dir/main.cpp.o
  /home/prix/Documents/6Semester/Compilers/Lab1/Q1/question1.h
+ /home/prix/Documents/6Semester/Compilers/Lab1/Utils/SymbolTable.h
  /home/prix/Documents/6Semester/Compilers/Lab1/main.cpp

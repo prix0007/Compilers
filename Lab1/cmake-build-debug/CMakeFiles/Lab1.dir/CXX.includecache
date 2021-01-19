@@ -10,9 +10,15 @@
 bits/stdc++.h
 -
 
+/home/prix/Documents/6Semester/Compilers/Lab1/Utils/SymbolTable.h
+bits/stdc++.h
+-
+
 /home/prix/Documents/6Semester/Compilers/Lab1/main.cpp
 bits/stdc++.h
 -
 Q1/question1.h
 /home/prix/Documents/6Semester/Compilers/Lab1/Q1/question1.h
+Utils/SymbolTable.h
+/home/prix/Documents/6Semester/Compilers/Lab1/Utils/SymbolTable.h
 

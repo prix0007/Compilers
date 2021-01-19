@@ -6,8 +6,6 @@
 
 using namespace std;
 
-const int MAX=100;
-
 class Node {
 
     string identifier, scope, type;
@@ -39,27 +37,7 @@ public:
     friend class SymbolTable;
 };
 
-class SymbolTable {
-    Node* head[MAX];
-
-public:
-    SymbolTable()
-    {
-        for (int i = 0; i < MAX; i++)
-            head[i] = NULL;
-    }
-
-    int hashf(string id); // hash function
-    bool insert(string id, string scope,
-                string Type, int lineno);
-
-    string find(string id);
-
-    bool deleteRecord(string id);
-
-    bool modify(string id, string scope,
-                string Type, int lineno);
-};
+// Symbol Table Functions
 
 // Function to modify an identifier
 bool SymbolTable::modify(string id, string s,
@@ -146,16 +124,15 @@ string SymbolTable::find(string id)
 }
 
 // Function to insert an identifier
-bool SymbolTable::insert(string id, string scope,
-                         string Type, int lineno)
+bool SymbolTable::insert(string id, string scope,string Type, int lineno)
 {
     int index = hashf(id);
     Node* p = new Node(id, scope, Type, lineno);
 
     if (head[index] == NULL) {
         head[index] = p;
-        cout << "\n"
-             << id << " inserted";
+//        cout << "\n"
+//             << id << " inserted";
 
         return true;
     }
@@ -166,8 +143,8 @@ bool SymbolTable::insert(string id, string scope,
             start = start->next;
 
         start->next = p;
-        cout << "\n"
-             << id << " inserted";
+//        cout << "\n"
+//             << id << " inserted";
 
         return true;
     }
