@@ -4,6 +4,8 @@
 
 using namespace std;
 
+bool checkUnsigned(string number);
+
 std::vector<std::string> resplit(const std::string & s, std::string rgx_str = "\\s+") {
 
     std::vector<std::string> elems;
@@ -20,7 +22,7 @@ std::vector<std::string> resplit(const std::string & s, std::string rgx_str = "\
 
     return elems;
 
-}
+};
 
 int main() {
     std::cout << "Hello. This is Lab1 for Compilers" << std::endl;
@@ -138,15 +140,41 @@ int main() {
             "200",
             "200.003",
             "200.004E-04",
-            "200.004E+400",
+            "200.004E+4",
             "200.004Exs04"
     };
 
     for(auto number: numbers){
-        cout<< endl << number;
+        cout << endl << checkUnsigned(number);
     }
 
     // Question 5 End
 
     return 0;
 }
+
+bool checkUnsigned(string number) {
+    string root, decimal, exp;
+    bool decimalFound = false;
+    bool expFound = false;
+    bool expSignFound = false;
+    string tracedNumber;
+    for(auto character: number){
+        // Check if any character is else than E then return false
+        if(!isdigit(character) && character != 'E' && character != '.' && character != '+' && character != '-'){
+            return false;
+        }
+        if(character == '.'){
+            decimalFound = true;
+        }
+        if(character == 'E'){
+            expFound = true;
+        }
+        if(character == '+' || character == '-'){
+            expSignFound = true;
+        }
+        tracedNumber = tracedNumber + character;
+    }
+    cout << tracedNumber << endl;
+    return true;
+};
