@@ -133,6 +133,19 @@ int main() {
 
     // Question 5 Start
 
+    // DFA Simulation for Ref. use Notes
+    const string numbers[] = {
+            "200",
+            "200.003",
+            "200.004E-04",
+            "200.004E+400",
+            "200.004Exs04"
+    };
+
+    for(auto number: numbers){
+        cout<< endl << number;
+    }
+
     // Question 5 End
 
     return 0;
