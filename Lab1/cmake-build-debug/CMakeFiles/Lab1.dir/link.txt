@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/Lab1.dir/main.cpp.o CMakeFiles/Lab1.dir/Q1/question1.cpp.o CMakeFiles/Lab1.dir/Utils/SymbolTable.cpp.o  -o Lab1 
