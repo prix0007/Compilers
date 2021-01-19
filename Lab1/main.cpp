@@ -85,17 +85,55 @@ int main() {
            for(auto x:words){
                if(x.length()>0) {
                     string result = keywordsTable.find(x);
-                    cout<< endl << result;
                     if(!(result == "-1")){
                         counter++;
+                        cout<< endl << result;
                     }
                }
            }
         };
     }
+    sampleFile.close();
     cout << endl << "Total Keywords Found: "<< counter;
 
     // Question 2 End
+
+    // Question 3 Start
+    counter = 0;
+    sampleFile.open("/home/prix/Documents/6Semester/Compilers/Lab1/Sample/question1_input.cpp");
+    if (!sampleFile) std::cerr << "Could not open the file!" << std::endl;
+    while(getline(sampleFile, line)){
+        if(line.length()>3){
+            words = resplit(line, "[, (><)#{};+*-_\"]");
+            for(auto x:words){
+                if(x.length()>0 && x == "const") {
+                    counter++;
+                    cout<<endl<<x;
+                }
+            }
+        };
+    }
+
+    cout << endl << "Total Constant Found in Program: "<< counter;
+
+    sampleFile.close();
+
+    // Question 3 End
+
+    // Question 4 Start
+    counter = 0;
+    sampleFile.open("/home/prix/Documents/6Semester/Compilers/Lab1/Sample/question1_input.cpp");
+    if (!sampleFile) std::cerr << "Could not open the file!" << std::endl;
+    while(getline(sampleFile, line)){
+        counter++;
+    }
+    cout << endl << "Total New Lines Found in Program: "<< counter;
+
+    // Question 4 End
+
+    // Question 5 Start
+
+    // Question 5 End
 
     return 0;
 }
